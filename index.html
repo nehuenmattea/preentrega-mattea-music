@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mattea Music | Venta de discos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Mattea Music</h1>
+      <p>Venta de discos</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#discos">Discos</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="inicio">
+        <h2>Bienvenido a Mattea Music</h2>
+      </section>
+
+      <section id="discos">
+        <h2>Discos</h2>
+        <div class="cards">
+          <article class="card">
+            <img src="images/dynamo.jpg" alt="Tapa del disco Dynamo de Soda Stereo" />
+            <h3>Dynamo</h3>
+            <p class="banda">Soda Stereo</p>
+            <p class="anio">1992</p>
+          </article>
+
+          <article class="card">
+            <img src="images/partedelareligion.jpg" alt="Tapa del disco Parte de la Religión de Charly García" />
+            <h3>Parte de la Religión</h3>
+            <p class="banda">Charly García</p>
+            <p class="anio">1987</p>
+          </article>
+
+          <article class="card">
+            <img src="images/peperina.jpg" alt="Tapa del disco Peperina de Serú Girán" />
+            <h3>Peperina</h3>
+            <p class="banda">Serú Girán</p>
+            <p class="anio">1981</p>
+          </article>
+
+          <article class="card">
+            <img src="images/pelusonofmilk.jpg" alt="Tapa del disco Peluson Of Milk de L.A.S" />
+            <h3>Peluson Of Milk</h3>
+            <p class="banda">Luis Alberto Spinetta</p>
+            <p class="anio">1991</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="resenas">
+        <h2>Reseñas</h2>
+        <div class="resenas-grid">
+          <blockquote class="resena destacada">
+            <p>"Excelente atención y los discos llegaron impecables. Súper recomendable."</p>
+            — Lucía, Moreno
+          </blockquote>
+
+          <blockquote class="resena">
+            <p>"Encontré un vinilo que buscaba hace años."</p>
+            — Martín, Morón
+          </blockquote>
+
+          <blockquote class="resena">
+            <p>"Buenos precios y muy buen trato."</p>
+            — Carla, Merlo
+          </blockquote>
+
+          <blockquote class="resena">
+            <p>"Me asesoraron muy bien para mi primer tocadiscos."</p>
+            — Tomás, Ituzaingó
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <div class="contacto-contenedor">
+          <div class="contacto-info">
+            <p>
+              ¿Te interesó algún disco? Contactate mediante el formulario y
+              recibirás una respuesta a la brevedad.
+            </p>
+          </div>
+
+          <form action="https://formspree.io/f/mljgbaaj" method="POST">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Mattea Music. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

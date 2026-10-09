@@ -1,0 +1,278 @@
+/* UNIVERSAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f1ea;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+}
+
+/* HEADER */
+header {
+  background-color: #111;
+  color: #f4f1ea;
+  text-align: center;
+  padding: 30px 20px;
+  border-bottom: 4px solid #d62828;
+}
+
+header h1 {
+  font-size: 3.5rem;
+}
+
+header p {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.9rem;
+}
+
+/* NAVEGACIÓN */
+nav {
+  background-color: #222;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+}
+
+nav a {
+  color: #f4f1ea;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #d62828;
+}
+
+/* SECCIONES: bloques separados */
+main {
+  padding-bottom: 20px;
+}
+
+section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 50px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+section h2 {
+  font-size: 2.2rem;
+  color: #d62828;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+/* INICIO con degradado */
+#inicio {
+  max-width: 100%;
+  margin: 0 0 40px 0;
+  border-radius: 0;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #d62828, #111);
+  color: #f4f1ea;
+}
+
+#inicio h2 {
+  color: #f4f1ea;
+  font-size: 3rem;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* PRODUCTOS (Flexbox) */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 220px;
+  max-width: 250px;
+  background-color: #f4f1ea;
+  border: 2px solid #222;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+}
+
+.banda {
+  font-weight: 700;
+}
+
+.anio {
+  color: #d62828;
+  font-weight: 700;
+}
+
+/* RESEÑAS (Grid) */
+.resenas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.resena {
+  background-color: #f4f1ea;
+  border-left: 5px solid #d62828;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.resena cite {
+  display: block;
+  margin-top: 10px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.resena.destacada {
+  grid-column: span 2;
+  background-color: #111;
+  color: #f4f1ea;
+  font-size: 1.2rem;
+}
+
+/* CONTACTO */
+.contacto-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 2px solid #222;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  background-color: #d62828;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #111;
+}
+
+/* FOOTER */
+footer {
+  background-color: #111;
+  color: #f4f1ea;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 4px solid #d62828;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 900px) {
+  .resenas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  section {
+    margin: 25px 15px;
+    padding: 35px 20px;
+  }
+
+  #inicio {
+    margin: 0 0 25px 0;
+    padding: 60px 20px;
+  }
+
+  #inicio h2 {
+    font-size: 2.2rem;
+  }
+
+  .contacto-contenedor {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .resenas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resena.destacada {
+    grid-column: span 1;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
